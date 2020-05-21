@@ -1,0 +1,14 @@
+{
+    "elements": {},
+    "attributes": {
+        "allow": {
+            "context": "iframe"
+        },
+        "integrity": {
+            "context": "link"
+        },
+        "target": {
+            "context": "img"
+        }
+    }
+}

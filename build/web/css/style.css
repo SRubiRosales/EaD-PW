@@ -1,0 +1,459 @@
+header{
+    text-align: center;
+}
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    margin: 0;
+}
+h1, h5{
+    padding: 10px 0;
+    text-align: center;
+}
+
+h3{
+    margin-top: 5px;
+    font-size: medium;
+    font-style: oblique;
+}
+h4{
+    font-weight: bold;
+}
+
+section {
+    padding: 5px 10px;
+}
+
+.parrafos{
+    text-align: justify;
+    margin-right: 10px;
+}
+
+.boton-login{
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+}
+
+.boton-registro{
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #0062cc;
+    background-color: #fff;
+}
+
+#boton-menu {
+	display: none;
+}
+
+label[for="boton-menu"] {
+	display: none;
+	padding: 5px;
+	background-color: #162e55;
+}
+
+label[for="boton-menu"]:hover {
+	cursor: pointer;
+	background: #000;
+}
+
+.nav-menu {
+	text-align: center;
+}
+
+.nav-menu ul {
+	list-style: none;
+	padding: 0;
+}
+
+.nav-menu li {
+	line-height: 3rem;
+	position: relative;
+	flex-grow: 1;
+}
+
+.nav-menu li ul {
+	position: absolute;
+}
+
+.nav-menu li:hover ul {
+	display: block;
+}
+
+.nav-menu a {
+	text-decoration: none;
+	font-size: large;
+	color: #fff;
+	padding: 5px 20px;
+	display: block;
+	transition: 0.3s;
+}
+
+.nav-menu a:hover {
+	background-color: #000;
+}
+
+.menu ul ul {
+	display: none;
+}
+
+.nav-menu .active {
+	background-color: #000;
+}
+/*Primer nivel de la barra de navegación*/
+.menu {
+	/*margin: 0;*/
+	background: #1b396a;
+	display: flex;
+	/*width: 100%;*/
+	/*justify-content: center;*/
+}
+
+.menu > li{
+	float: left;
+}
+
+/*Segundo nivel de la barra de navegación*/
+.nav-menu li li {
+	background-color: #224785;
+	max-height: 0;
+	transition: all .4s;
+	overflow: hidden;
+}
+
+.nav-menu li:hover li {
+	max-height: 200px;
+	overflow: visible;
+}
+
+.menu > li > ul {
+	top: 100%;
+}
+
+.page{
+    display: table;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+}
+
+aside i{
+    color: #000;
+    font-size: medium;
+}
+
+#logos-gob {
+    display: inline-block;
+    max-height: 140px;
+}
+
+.contenedor{
+    float: right;
+    width: 75%;
+    padding: 5px 5px;
+}
+
+/*a {
+    margin-bottom: 10px;
+}*/
+
+.login-form{
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-form h3{
+    font-size: x-large;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: #0062cc;
+}
+
+.register-form{
+    padding: 5%;
+    background: #0062cc;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.register-form h3{
+    font-size: x-large;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+.contenedor-login form{
+    padding: 10%;
+}
+
+.boton
+{
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+
+input[value="Login"]{
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+}
+
+input[value="Registrarse"]{
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #0062cc;
+    background-color: #fff;
+}
+.register-form .ForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-form .ForgetPwd{
+    color: #0062cc;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+aside {
+    float: left;
+    width: 25%;
+    padding: 5px;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.margin-RL{
+    margin-right: 35px;
+    margin-left: 35px;
+}
+
+#contenedorFooterR{
+    padding-top: 25px;
+    margin-bottom: 25px;
+    float: right;
+    width: 30%;
+    text-align: center;
+}
+
+#contenedorFooterC{
+    padding-top: 25px;
+    margin-bottom: 25px;
+    float: left;
+    width: 40%;
+    text-align: center;
+}
+
+#contenedorFooterL{
+    padding-top: 25px;
+    margin-bottom: 25px;
+    float: left;
+    width: 30%;
+    text-align: center;
+}
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+table thead tr {
+    height: 50px;
+    background:#a12040;
+    color: #e4ffff;
+}
+
+table tbody tr {
+    height: 50px;
+}
+
+table tbody tr:last-child {
+    border: 0;
+}
+
+table td, table th {
+    text-align: left;
+}
+
+tbody tr {
+font-size: 15px;
+color: #808080;
+line-height: 1.2;
+font-weight: unset;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a[target="_blank"] {
+    font-style: italic;
+  }
+
+#fondo-footer{
+    background-image: url("https://www.tuxtla.tecnm.mx/wp-content/themes/albinomouse-child/fondofooter.jpg");
+    min-height: 150px;
+}
+
+.icono-footer {
+    width: 40px;
+    height: 40px;
+}
+
+#gob-footer {
+    width: 80%;
+    height: auto;
+	margin: 0 auto;
+	padding-top: 15px;
+}
+.site-info {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 13px !important;
+    color: #ffffff;
+    float: right;
+    background-color: #1b396a;
+}
+
+.site-footer {
+    background-color: #1b396a;
+    color: #fff;
+    font-weight: bold;
+	padding-top: 25px;
+}
+
+#colophon .widget-title {
+	
+	padding-bottom: 10px;
+}
+input:hover { /*-- Pseudoclases de estado: el cual cada que pasemos el cursor sobre un input o un textarea 
+    se pinte de otro color --*/
+    background-color: rgb(173, 184, 247);
+  }
+textarea:hover{
+    background-color: rgb(173, 184, 247); 
+}
+textarea:enabled { /*-- Pseudoclases de estado: el cual usamos para que el texto del textarea se escriba en rojo cuando
+    se des-seleccione --*/
+    color: red;
+}
+p ~ span{ /*-- Selector hermanos: que utilizamos para cambiar todos los span seguidos de un parrafo --*/
+    font-weight: bold;
+}
+ /*-- Selector de atributo: para que cada enlace sea pintado de color plateado, cuando sean un enlace a facebook --*/
+/*a[href*="facebook"] {
+    background-color: silver;
+}*/
+
+/*Estilo en dispositivos móviles*/
+@media(max-width: 1080px) {
+    /*Oculta el logo de gobierno de México*/
+    #logo-gob {
+        display: none;
+    }
+}
+@media(max-width: 768px) {
+    /*Solo muestra los logos que no son png*/
+    header > div > a img[src$=".png"] {
+        display: none;
+    }
+
+    /*Estilo de menú*/
+	label[for="boton-menu"] {/*Selector de atributo*/
+		display: block;
+	}
+
+	.nav-menu {
+		position: relative;
+		width: 100%;
+		text-align: left;
+		transition: 0.3s;
+	}
+
+	.menu {
+		flex-direction: column;
+	}
+
+	.menu > li > ul {
+        text-align: center;
+        top: 0;
+		left: 45%;
+		width: 55%;
+	}
+
+	.nav-menu a {
+		font-size: medium;
+		padding: 0px 5px;
+	}
+
+	.nav-menu li:hover ul {
+		display: inline-flex;
+    }
+    
+    /*Aside oculto*/
+    aside {
+        display: none;
+    }
+    .contenedor {
+        width: 100%;
+    }
+    
+    /*Footer*/
+    #contenedorFooterR{
+        width: 100%;
+    }
+    
+    #contenedorFooterC{
+        margin: 0;
+        width: 100%;
+    }
+    
+    #contenedorFooterL{
+        width: 100%;
+    }
+}
