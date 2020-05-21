@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="EaD">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +9,8 @@
         <!-- Hojas de estilo-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+        <script src="controlador.js"></script>
     </head>
     <body>
         <header><!--Encabezado-->
@@ -103,6 +105,26 @@
                     <p class="card-text">Quédate en casa y estudia 100% en línea</p>
                     </div>
                 </div>
+            </div>
+            <div ng-controller="ControladorInput">
+                <h1>Comentarios</h1>
+                <div class="card-group">
+                    <div class="card border-light">
+                        <h3>Primer nombre</h3>
+                        <input type="text" class="card" ng-model="nombres" placeholder="nombres">
+                        <h3>Apellidos</h3>
+                        <input type="text" class="card" ng-model="apellidos" placeholder="apellidos">
+                        <h3>Nombre completo:</h3>
+                        {{ nombres + " "+ apellidos }}
+                    </div>
+                    <div class="card border-light">
+                        <img class="img-fluid mx-auto" width="50%" src="imgs/comentario.png" alt="coment">
+                    </div>
+                </div>
+                    <h5>Escríbenos lo que gustes</h5>
+                    <textarea type="text" class="form-control" ng-model="comentario" placeholder="Comentario" aria-label="With textarea"></textarea>
+                    <h5>Esto es lo que estás escribiendo</h5>
+                    <textarea type="text" class="form-control" aria-label="With textarea" disabled>{{nombres + " "+ apellidos + " dice: " + comentario}}</textarea>
             </div>
         </section>
         <div class="site-info"><!--Información de contacto-->
