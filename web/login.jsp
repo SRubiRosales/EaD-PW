@@ -50,6 +50,7 @@
                     <ul>
                         <li><a href="directorio.html">Directorio</a></li>
                         <li><a href="contacto.html">Correo Institucional</a></li>
+                        <li><a href="beneficios.html">Ventajas de EaD</a></li>
                     </ul>
                 </li>
                 <li><a href="login.html">Iniciar Sesión</a></li>

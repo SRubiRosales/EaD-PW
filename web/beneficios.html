@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,6 +14,8 @@
         <!-- Hojas de estilo-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
+        <!--AngularJS-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     </head>
     <body>
         <header><!--Encabezado-->
@@ -37,7 +44,6 @@
                     <ul>
                         <li><a href="ofertaEducativa.html">Sedes Remotas</a></li>
                         <li><a href="convocatoria.html">Convocatoria</a></li>
-                        <li><a href="beneficios.html">Ventajas de EaD</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Contacto</a>
@@ -56,7 +62,7 @@
             <!-- Vídeo cargado desde nuestra carpeta de recursos, con controles de vídeo-->
             <video width="100%" controls>
                 <source src="media/video.mp4" type="video/mp4"> <!-- Carga del vídeo, y definición de tipo, con mensaje en caso de error-->
-                <p>Lo sentimos, su navegador no soporta este video, holiiii</p>
+                <p>Lo sentimos, su navegador no soporta este video</p>
             </video>
             <br>
             <i>Conoce los síntomas que provoca el Coronavirus y cómo prevenir el contagio</i><!--Texto en cursiva-->
@@ -73,45 +79,21 @@
                 </div><!-- Fin de la sección del objeto -->
         </aside><!-- Fin de aside-->
         <section class="contenedor">
-            <!-- Cuerpo de la vista contacto -->
-        <h1>¡Comunicate con nosotros! </h1> <!-- Título -->
-        <p>Recuerda que puedes contactárnos a través de nuestras redes sociales o vía telefonica a cualquiera de nuestros números 
-        en la sección de directorio.</p>
-        <span class="flex-center"><br>También puedes enviarnos un correo desde cualquier otra plataforma al correo que aparece al final pie de la página.</span>
-
-        <div class="card-group">
-            <div class="card border-light">
-                <img class="card-img-top" src="imgs/aviso.png" alt="Aviso">
-            </div>
-            <div class="card border-light">
-                <img class="img-fluid mx-auto" src="imgs/email.png" width="50%" alt="Email">
-                <div class="input-group mb-3"> <!-- input-group para poder ingresar varias entradas de nuestros formularios-->
-                    <div class="input-group-prepend"> <!-- input para que el usuario ingrese su nombre-->
-                        <span style="width: 100%;" class="input-group-text" id="basic-addon1">Nombre</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
+            <h2 class="flex-center"><br>Beneficios de la Educación a Distancia</h2>
+            <img src="imgs/beneficios.png" class="card-img-top" alt="Ventajas EaD">
+            <div class="card" ng-app="listApp" ng-controller="listController">
+                <div class="card-body">
+                    <h1>Mi Lista:</h1>
+                    <br><!--Salto de línea-->
+                    <ul>
+                        <li ng-repeat="ventaja in ventajas">{{ ventaja }}</li>
+                    </ul>
                 </div>
-                <div class="input-group mb-3"> <!-- Input para ingresar su correo -->
-                    <div class="input-group-prepend">
-                        <span style="width: 85px;" class="input-group-text" id="basic-addon1">Correo</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Correo" aria-label="Correo" aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend"> <!-- Input para ingresar asunto del correo-->
-                        <span style="width: 85px;" class="input-group-text" id="basic-addon1">Asunto</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Asunto" aria-label="Asunto" aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3"> <!-- textarea para ingresar el contenido del mensaje -->
-                    <textarea class="form-control" placeholder="Mensaje" aria-label="With textarea"></textarea>
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Enviar</button>
-                    </div>   
+                <div class="card-footer" ng-init="materia='Programación Web'">
+                    <p>El nombre de la materia es: </p>
+                    <span ng-bind="materia"></span>
                 </div>
             </div>
-        </div>
-    </div>
         </section>
         <div class="site-info"><!--Información de contacto-->
             <hr/><!--Separador-->
@@ -143,6 +125,22 @@
             <hr>
         </div>
     </footer>
-    
+    <script>
+        var app = angular.module('listApp', []);
+        app.controller('listController', function($scope){
+            $scope.ventajas = [
+                "Estudias en tu casa, libre de coronavirus...",
+                "Estudias mientras trabajas",
+                "Realiza tus actividades desde cualquier dispositivo",
+                "Puedes ver tus clases mientras realizas otras actividades",
+                "Olvídate de llegar tarde a clases",
+                "Puedes tomar tus clases desde cualquier lugar",
+                "No pierdes tiempo en el tráfico de camino a la escuela o de regreso a casa",
+                "Interactúa constantemente con alumnos y maestros en foros y chats",
+                "Desarrolla nuevas competencias",
+                "Sé más activo y autónomo",
+            ]
+        });
+    </script>
 </body>
 </html>
