@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html ng-app="EaD">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,6 +16,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/style.css">
         <!--AngularJS-->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+        <script src="js/controlador.js"></script>
     </head>
     <body>
         <header><!--Encabezado-->
@@ -81,17 +82,18 @@ and open the template in the editor.
         <section class="contenedor">
             <h2 class="flex-center"><br>Beneficios de la Educación a Distancia</h2>
             <img src="imgs/beneficios.png" class="card-img-top" alt="Ventajas EaD">
-            <div class="card" ng-app="listApp" ng-controller="listController">
-                <div class="card-body">
+            <div class="card">
+                <div class="card-body" ng-controller="listController">
                     <h1>Mi Lista:</h1>
                     <br><!--Salto de línea-->
-                    <ul>
-                        <li ng-repeat="ventaja in ventajas">{{ ventaja }}</li>
+                    <ul><!--Lista ordenada-->
+                        <li ng-repeat="ventaja in ventajas">{{ ventaja }}</li><!--Elementos de la lista-->
                     </ul>
                 </div>
+                <!--Div con una directiva a evaluar en este scope-->
                 <div class="card-footer" ng-init="materia='Programación Web'">
                     <p>El nombre de la materia es: </p>
-                    <span ng-bind="materia"></span>
+                    <span ng-bind="materia"></span><!--Contenido del span con el valor de "materia"-->
                 </div>
             </div>
         </section>
@@ -125,22 +127,5 @@ and open the template in the editor.
             <hr>
         </div>
     </footer>
-    <script>
-        var app = angular.module('listApp', []);
-        app.controller('listController', function($scope){
-            $scope.ventajas = [
-                "Estudias en tu casa, libre de coronavirus...",
-                "Estudias mientras trabajas",
-                "Realiza tus actividades desde cualquier dispositivo",
-                "Puedes ver tus clases mientras realizas otras actividades",
-                "Olvídate de llegar tarde a clases",
-                "Puedes tomar tus clases desde cualquier lugar",
-                "No pierdes tiempo en el tráfico de camino a la escuela o de regreso a casa",
-                "Interactúa constantemente con alumnos y maestros en foros y chats",
-                "Desarrolla nuevas competencias",
-                "Sé más activo y autónomo",
-            ]
-        });
-    </script>
 </body>
 </html>
